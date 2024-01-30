@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        input{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 25px;
+        }
+        button{
+            background-color: aquamarine;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 25px;
+            cursor:not-allowed;
+        }
+    </style>
+</head>
+<body>
+    {% block content %}
+    <form action="result">
+        <h1>PRODUCT</h1>
+        <label for="">Laptop : </label>
+        <input type="text" name="laptop"><br><br>
+        <label for="">Model : </label>
+        <input type="text" name="Model"><br><br>
+        <label for="">Price : </label>
+        <input type="number" name="Price"><br><br>
+        <button>submit</button>
+    </form>
+    {% endblock %}
+</body>
+</html>

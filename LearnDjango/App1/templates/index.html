@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMEDHUB</title>
+    <link rel="stylesheet" href="{% static 'css\index.css' %}">
+    <link rel="icon" href="{% static 'img\logo1.png' %}">
+    
+</head>
+<body>
+    <center>
+        <img src="{% static 'img\logo.png' %}" alt="Emedhub" width="400px" height="100px">
+    </center>
+    <h1> ! --- Medical Management --- !  {{Name}} </h1>
+    <h3><a href="">Home</a></h3>
+    <h3><a href="">Contact</a><br></h3>
+    <h3><a href="">Help</a><br></h3>
+    <h3><a href="">About</a><br></h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, consequuntur modi. Illo doloremque consectetur vero aspernatur vel perferendis ducimus maxime, natus incidunt cum culpa consequatur, illum, saepe quas ullam reprehenderit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo corporis quos fuga esse, cum labore fugiat quidem mollitia cupiditate placeat, aspernatur vero laborum iste! Omnis asperiores consectetur doloremque molestiae iure?</p>
+    <iframe src="https://www.emedhub.co.in/" frameborder="0" width="800" height="300"></iframe>
+
+    <!--
+    <iframe src="https://tamilrockershd.online/home/" frameborder="0"></iframe>
+    -->
+
+    <br>
+    {%comment%}
+
+    {{Users}}
+
+    {% endcomment %}
+
+    <center>
+        <table>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Eligible</th>
+            </tr>
+            {% for user in Users %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td>{% if user.age >= 18%} Yes
+                    {% else %} No 
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

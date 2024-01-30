@@ -1,0 +1,28 @@
+To create venv 
+ --< python -m venv .venv
+
+To activate venv
+ --> .venv/scripts/activate
+
+To upgrade pip
+ --> python -m pip install --upgrade pip
+
+To install Django
+ --> python -m pip install django
+
+To create new project 
+ -->django-admin startproject (project_name)
+
+To create new app
+ -->python manage.py (app_name)
+
+To go setting and set the installed app fun to given the new installed app
+
+To create template folder in app for html files
+
+To create static folder to give css,bootstrap,images,js etc..
+
+And set the setting file in static keys
+
+properly import the file and packages
+

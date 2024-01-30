@@ -1,0 +1,21 @@
+to create an environment -- python -m venv .venv(nameof environment)
+to activate the environment -- .venv\scripts\activate
+to chenk an modules in environment -->pip list
+
+sometime to get the error (
+    --> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+    --> Get-ExecutionPolicy  
+    --> Get-ExecutionPolicy -list
+)
+
+pip upgrade --> pyhton -m pip install --upgrade pip
+
+to install django --> python -m pip install django
+
+to create a project --> django-admin startproject project_name .
+
+to create APP --> python manage.py startapp app_name
+
+static file --> to manage css , js, image file django 
+
+python manage.py createsuperuser --> to create admin userid and password  (  user - Sri , Pwd - Sri@25)

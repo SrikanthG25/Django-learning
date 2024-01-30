@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+        table,td,th{
+            border: 5px solid rgb(109, 235, 233);
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1><b>WELCOME TO UNTOLD MYSTERY</b></h1>
+    <p>Mandy gets an unusual gift of altering space-time continuum to resurrect her lover within the "Ray Zone".<br> Her action impacts every life form in that zone and she has to find a way to rectify it.</p>
+    
+    {% comment %}
+    {{users}}
+    {% endcomment %}
+    
+    {{employee}}
+
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Eligible</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{user.Name}}</td>
+            <td>{{user.age}}</td>
+            <td>{% if user.age >= 18 %} Yes {% else %} No {% endif%}
+            </td>   
+        </tr>
+        {% endfor%}
+    </table>
+    <p>this is another employee table</p>
+
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Eligible</th>
+        </tr>
+        {% for emp in employee %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{emp.Name}}</td>
+            <td>{{emp.age}}</td>
+            <td>{% if emp.age >= 18 %} Yes {% else %} No {% endif %}</td>
+        </tr>
+        {% endfor%}
+    </table>
+    <h1>{{Name}}</h1>
+
+</body>
+</html>

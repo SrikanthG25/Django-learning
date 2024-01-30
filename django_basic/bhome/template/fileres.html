@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Records</title>
+    <style>
+        table{
+            border: 3px solid black;
+           
+            background-color:paleturquoise;
+        }
+        th,td{
+            padding: 15px;
+        }
+        th{
+            font-size: 20px;
+        }
+        .center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        input{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    {% block content%}
+    <table class="center">
+        <tr>
+            <th colspan="3">
+                <center>View Details</center><hr>
+            </th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{Name}}</td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td>{{Pass}}</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{add}}</td>
+        </tr>
+        <tr>
+            <th>Mail</th>
+            <td>{{mail}}</td>
+        </tr>
+    </table>
+    {% endblock %}
+</body>
+</html>
